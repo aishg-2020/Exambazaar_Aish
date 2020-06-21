@@ -203,12 +203,21 @@ function RenderQuestion(id)
   const quesurl = 'https://www.exambazaar.com/api/coding-round/routes/random-question';
     axios.post(quesurl, {"api_key": "9166408289", "api_secret": "5ee9a6dbe2eb165d3e5e8174", "examId":id})
     .then((response) => {
+      
+      
       const question = response.data.data.question;
       console.log(response);
       
     questionArray.push(question);
-     
-      const subQuestions = question.questions;
+    let subQuestions=[];
+    try{
+       subQuestions = question.questions;
+    }
+    catch{
+      alert('No Question in Database for the selected exam');
+      return;
+    }
+      
       const context = (question._hascontext)?question.context:'';
       const exam = question.exam;
       const examsection = question.examsection?question.examsection:'';
