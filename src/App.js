@@ -85,7 +85,10 @@ constructor(props){
   return (
     <div>
         <Header/>
-        <div id= "maindiv" class="container">
+        <div id= "maindiv" class="row-content">
+          <div>
+          <h3>Please select the streams from the dropdown menu</h3>
+          </div>
           <StreamMenu streams ={this.state.streams} onClick={(sid)=> this.onStreamSelect(sid)} />
         
              

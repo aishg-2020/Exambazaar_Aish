@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -43,6 +44,7 @@
 
 .row-content {
   margin:0px auto;
+  margin-left:15% ;
   padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
   min-height:400px;

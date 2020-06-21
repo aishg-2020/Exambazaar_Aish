@@ -193,7 +193,8 @@ function RenderQuestion(id)
 {
     
     var maindiv = document.getElementById('maindiv');
-    
+    maindiv.classList.add('container');
+    maindiv.classList.remove('row-content');
     const contextp = document.getElementById('contextp');
     if(contextp)
     {
@@ -203,7 +204,7 @@ function RenderQuestion(id)
     axios.post(quesurl, {"api_key": "9166408289", "api_secret": "5ee9a6dbe2eb165d3e5e8174", "examId":id})
     .then((response) => {
       const question = response.data.data.question;
-      
+      console.log(response);
       
     questionArray.push(question);
      
